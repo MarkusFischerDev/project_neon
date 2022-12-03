@@ -111,15 +111,16 @@ body {
 #hiddenBody{
   visibility: hidden;
   opacity: 0;
-  transition: visibility  0s 2s, opacity 2s linear;
 }
 .fade-in{
-  animation: fade-in 2s;
-  animation-timing-function: ease-in;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
 }
-@keyframes fade-in {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+.fade-out{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
 }
 .glassmorph{
   background: #2121214d;
