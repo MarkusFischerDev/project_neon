@@ -115,12 +115,12 @@ body {
 .fade-in{
   visibility: visible;
   opacity: 1;
-  transition: opacity 2s linear;
+  transition: opacity 2s ease-in;
 }
 .fade-out{
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s 2s, opacity 2s linear;
+  transition: visibility 0s 1.5s, opacity 1.5s ease-in-out;
 }
 .glassmorph{
   background: #2121214d;
