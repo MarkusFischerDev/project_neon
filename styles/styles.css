@@ -570,9 +570,11 @@ animation: paths 5s step-end infinite, opacity 5s step-end infinite,
   left: 0;
   right: 0;
   bottom: 0;
+  overflow:hidden;
 }
 .hero-container {
   position: relative;
   padding: 200px 0;
   text-align: center;
+  
 }
