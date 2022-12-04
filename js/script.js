@@ -7,7 +7,7 @@ function removeHidden(){
     button.classList.add("fade-out")
   }, delayInMilliseconds)
   setTimeout(function(){
-    element.classList.add("fade-in")
+    element.classList.add("fade-in-bottom")
     element.removeAttribute("id")
   }, delayInMilliseconds)
 }
