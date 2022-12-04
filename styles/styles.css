@@ -17,7 +17,7 @@ body {
   position: relative;
   display: inline-block;
   padding: 25px 30px;
-  margin: 40px 0;
+  margin: 0 0;
   color: #77e700;
   text-decoration: none;
   text-transform: uppercase;
@@ -105,8 +105,25 @@ body {
       bottom: 100%;
   }
 }
-.middle{
-  margin-top: 20vh;
+.neon-loader, .neon-loader:hover{
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+  margin: 0 0;
+  color: #77e700;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  cursor:pointer;
+  background: #77e700;
+  color: #050801;
+  box-shadow: 0 0 5px #77e700,
+              0 0 25px #77e700,
+              0 0 50px #77e700,
+              0 0 200px #77e700;
+   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 #hiddenBody{
   visibility: hidden;
@@ -118,10 +135,15 @@ body {
   transition: opacity 2s ease-in;
 }
 .fade-out{
-  visibility: hidden;
+  display: none;
   opacity: 0;
-  transition: visibility 0s 1.5s, opacity 1.5s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
 }
+@keyframes blink {50% { color: transparent }}
+.loader__dot { animation: 1.5s blink infinite }
+.loader__dot:nth-child(2) { animation-delay: 375ms }
+.loader__dot:nth-child(3) { animation-delay: 750ms }
+
 .glassmorph{
   background: #2121214d;
   border-radius: 16px;
@@ -576,5 +598,18 @@ animation: paths 5s step-end infinite, opacity 5s step-end infinite,
   position: relative;
   padding: 200px 0;
   text-align: center;
-  
+}
+/* scrollbar */
+::-webkit-scrollbar{
+  background: #77e700;
+  width: 1vh;
+  background: #3d3d3d4d;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid #2121214d;
+}
+::-webkit-scrollbar-button{
+  display: none;
 }
