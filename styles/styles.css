@@ -140,20 +140,14 @@ body {
 }
 /* glitch */
 .hero {
-  font-size: clamp(40px, 10vw, 100px);
   line-height: 1;
   display: inline-block;
   z-index: 2;
   letter-spacing: 10px;
 }
-.demo {
-height: 100px;
-background: #fff;
-}
 .layers {
 position: relative;
 }
-
 .layers::before,
 .layers::after {
 content: attr(data-text);
@@ -161,19 +155,16 @@ position: absolute;
 width: 110%;
 z-index: -1;
 }
-
 .layers::before {
 top: 10px;
 left: 15px;
 color: #e0287d;
 }
-
 .layers::after {
 top: 5px;
 left: -10px;
 color: #1bc7fb;
 }
-
 .single-path {
 clip-path: polygon(
   0% 12%,
@@ -226,11 +217,9 @@ clip-path: polygon(
   4% 83%
 );
 }
-
 .paths {
 animation: paths 5s step-end infinite;
 }
-
 @keyframes paths {
 0% {
   clip-path: polygon(
@@ -271,7 +260,6 @@ animation: paths 5s step-end infinite;
     50% 8%
   );
 }
-
 5% {
   clip-path: polygon(
     0% 29%,
@@ -304,7 +292,6 @@ animation: paths 5s step-end infinite;
     52% 88%
   );
 }
-
 30% {
   clip-path: polygon(
     0% 53%,
@@ -339,7 +326,6 @@ animation: paths 5s step-end infinite;
     65% 4%
   );
 }
-
 45% {
   clip-path: polygon(
     0% 33%,
@@ -400,7 +386,6 @@ animation: paths 5s step-end infinite;
     68% 83%
   );
 }
-
 76% {
   clip-path: polygon(
     0% 26%,
@@ -436,7 +421,6 @@ animation: paths 5s step-end infinite;
     63% 14%
   );
 }
-
 90% {
   clip-path: polygon(
     0% 41%,
@@ -472,7 +456,6 @@ animation: paths 5s step-end infinite;
     38% 62%
   );
 }
-
 1%,
 7%,
 33%,
@@ -482,69 +465,55 @@ animation: paths 5s step-end infinite;
   clip-path: none;
 }
 }
-
 .movement {
 /* Normally this position would be absolute & on the layers, set to relative here so we can see it on the div */
 position: relative;
 animation: movement 8s step-end infinite;
 }
-
 @keyframes movement {
 0% {
   top: 0px;
   left: -20px;
 }
-
 15% {
   top: 10px;
   left: 10px;
 }
-
 60% {
   top: 5px;
   left: -10px;
 }
-
 75% {
   top: -5px;
   left: 20px;
 }
-
 100% {
   top: 10px;
   left: 5px;
 }
 }
-
 .opacity {
 animation: opacity 5s step-end infinite;
 }
-
 @keyframes opacity {
 0% {
   opacity: 0.1;
 }
-
 5% {
   opacity: 0.7;
 }
-
 30% {
   opacity: 0.4;
 }
-
 45% {
   opacity: 0.6;
 }
-
 76% {
   opacity: 0.4;
 }
-
 90% {
   opacity: 0.8;
 }
-
 1%,
 7%,
 33%,
@@ -554,59 +523,56 @@ animation: opacity 5s step-end infinite;
   opacity: 0;
 }
 }
-
 .font {
 animation: font 7s step-end infinite;
 }
-
 @keyframes font {
 0% {
   font-weight: 100;
   color: #e0287d;
   filter: blur(3px);
 }
-
 20% {
   font-weight: 500;
   color: #77e700;
   filter: blur(0);
 }
-
 50% {
   font-weight: 300;
   color: #1bc7fb;
   filter: blur(2px);
 }
-
 60% {
   font-weight: 700;
   color: #77e700;
   filter: blur(0);
 }
-
 90% {
   font-weight: 500;
   color: #e0287d;
   filter: blur(6px);
 }
 }
-
 .glitch span {
 animation: paths 5s step-end infinite;
 }
-
 .glitch::before {
 animation: paths 5s step-end infinite, opacity 5s step-end infinite,
   font 8s step-end infinite, movement 10s step-end infinite;
 }
-
 .glitch::after {
 animation: paths 5s step-end infinite, opacity 5s step-end infinite,
   font 7s step-end infinite, movement 8s step-end infinite;
 }
-
+.environment {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .hero-container {
-position: relative;
-padding: 200px 0;
-text-align: center;
+  position: relative;
+  padding: 200px 0;
+  text-align: center;
 }
