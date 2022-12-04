@@ -146,12 +146,10 @@ body {
   z-index: 2;
   letter-spacing: 10px;
 }
-
 .demo {
 height: 100px;
 background: #fff;
 }
-
 .layers {
 position: relative;
 }
