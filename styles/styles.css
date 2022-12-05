@@ -143,8 +143,8 @@ body {
 }
 .fade-in-bottom{
   animation-name: fade-in-bottom;
-  animation-duration: 0.65s;
-  animation-timing-function: ease-in-out;
+  animation-duration: .65s;
+  animation-timing-function: cubic-bezier(.35,1,.8,1);
 }
 @keyframes fade-in-bottom {
   from {

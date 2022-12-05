@@ -12,13 +12,10 @@ function removeHidden(){
 
   function doSetTimeout(i){
     setTimeout(function(){
-      console.log(fadeInElements);
-      console.log(i)
       fadeInElements[i].classList.add("fade-in-bottom");
       fadeInElements[i].classList.remove("revealOnScroll");
-    }, delayInMilliseconds * (i + 2));
-  }
-
+    }, delayInMilliseconds * (i  + 2));
+  };
   for(var i = 0; i < fadeInElements.length; i++){
     doSetTimeout(i)
   };
